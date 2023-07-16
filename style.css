@@ -1,0 +1,98 @@
+body{
+    background: black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.canvasHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    height: 100vh;
+    width: 100%;
+}
+
+#canvasPlate:hover{
+    cursor:cell;
+}
+
+.BtnWrapper{
+    position:fixed;
+    /* background-color: pink; */
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:1.5em;
+}
+
+.startBtn{
+    font-size:3em;
+    font-weight: 600;
+    padding:0.3em;
+    width:5em;
+    border-radius: 0.3em;
+    transition: all 0.17s;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.startBtn:hover{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.textHolder{
+    display: grid;
+    position: fixed;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items:start;
+    top:0;
+    justify-content: center;
+    width: 100%;
+    border:2px;
+    border-style: solid;
+    pointer-events: none;
+}
+
+.canvasContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.health, .points, .score{
+    background-color: rgba(240,240,240,1);
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 7px;
+}
+
+@media (max-width:600px){
+    .health, .points, .score{
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width:450px) {
+    .textHolder{
+        grid-template-columns: 1fr;
+    }
+}
+   
